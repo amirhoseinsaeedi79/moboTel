@@ -1,7 +1,7 @@
 function App() {
   return (
     <div>
-      <span> start project **</span>
+      <span> start project ********</span>
     </div>
   );
 }

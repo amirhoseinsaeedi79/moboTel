@@ -13,4 +13,6 @@ export const HISTORY = "/userPanel/history";
 export const LOVE_PRODUCTS = "/userPanel/loveProducts";
 export const TICKETS = "/userPanel/tickets";
 export const PAYMENT = "/userPanel/tickets";
+export const ERROR_ROUTE = "*";
+
 

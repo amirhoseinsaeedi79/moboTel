@@ -1,8 +1,11 @@
+import { Outlet } from 'react-router-dom';
 
 const UserPanel = () => {
   return (
     <div>
-      <span>UserPanel</span>
+      <span>
+      <Outlet />
+      </span>
     </div>
   )
 }

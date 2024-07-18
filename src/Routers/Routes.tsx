@@ -6,6 +6,7 @@ import { useRoutes } from 'react-router-dom';
 import {
   CART,
   EDIT_PROFILE,
+  ERROR_ROUTE,
   HISTORY,
   HOME_ROUTE,
   LOVE_PRODUCTS,
@@ -30,9 +31,12 @@ const PayMent = lazy(() => import("../Pages/PayMent/index"));
 const UserPanel = lazy(() => import("../Pages/UserPanel/index"));
 const Profile = lazy(() => import("../Pages/UserPanel/Profile/index"));
 const EditProfile = lazy(() => import("../Pages/UserPanel/EditProfile/index"));
-const LoveProducts = lazy(() => import("../Pages/UserPanel/LoveProducts/index"));
+const LoveProducts = lazy(
+  () => import("../Pages/UserPanel/LoveProducts/index")
+);
 const History = lazy(() => import("../Pages/UserPanel/History/index"));
 const Tickets = lazy(() => import("../Pages/UserPanel/Tickets/index"));
+const ErrorPage = lazy(() => import("../Pages/ErrorPage/index"));
 
 export const Routes = () =>
   useRoutes([
@@ -77,23 +81,27 @@ export const Routes = () =>
               index: true,
             },
             {
-              path:EDIT_PROFILE,
-              element: <EditProfile />
+              path: EDIT_PROFILE,
+              element: <EditProfile />,
             },
             {
-              path:LOVE_PRODUCTS,
-              element: <LoveProducts />
+              path: LOVE_PRODUCTS,
+              element: <LoveProducts />,
             },
             {
-              path:HISTORY,
-              element: <History />
+              path: HISTORY,
+              element: <History />,
             },
             {
-              path:TICKETS,
-              element: <Tickets />
+              path: TICKETS,
+              element: <Tickets />,
             },
           ],
         },
       ],
+    },
+    {
+      path: ERROR_ROUTE,
+      element: <ErrorPage />,
     },
   ]);

@@ -1,11 +1,11 @@
-import React from 'react';
+import { Outlet } from 'react-router-dom';
 
-const MainPage:React.FC = () => {
+const MainPage = () => {
   return (
     <div>
-      <div>navbar</div>
-      {/* {Outlet} */}
-      <div>footer</div>
+      <div className='text-4xl text-blue-500'>navbar</div>
+      <Outlet />
+      <div className='text-4xl text-red-500'>footer</div>
     </div>
   )
 }
